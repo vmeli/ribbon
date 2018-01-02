@@ -1,0 +1,66 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html { 
+  font-size: 62.5%; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ribbon {
+	font-size: 16px;
+	position: relative;
+	background: #0069CD;
+	color: #fff;
+	text-align: center;
+	padding: 1rem 2rem;
+	margin: 2rem auto 3rem;
+	width: 50%;
+}
+.ribbon:before,
+.ribbon:after {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: -1rem;
+	border: 1.5rem solid #1A97DC;
+	z-index: -1;
+}
+
+.ribbon:before {
+ left: -2rem;
+ border-right-width: 1.5rem;
+ border-left-color: transparent;
+}
+
+.ribbon:after {
+ right: -2rem;
+ border-left-width: 1.5rem;
+ border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before,
+.ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #004279 transparent transparent transparent;
+ bottom: -1rem;
+}
+
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1rem 0 0 1rem;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1rem 1rem 0 0;
+}
